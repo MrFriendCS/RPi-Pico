@@ -1,10 +1,10 @@
 # RGB LED
 
-Using Picozero to control a RGB LED.
+Using Picozero to to sense a button press to control a RGB LED.
 
 ## Layout
 
-![RGB LED Layout](rgbLED.png)
+![RGB LED Layout](media/rgbButton.png)
 
 ## Code
 
