@@ -4,5 +4,5 @@ Using Picozero to control a RGB LED.
 
 ## Layout
 
-![RGB LED Layout](rgbLED.png)
+![RGB LED Layout](Pico - RGB LED.png)
 
