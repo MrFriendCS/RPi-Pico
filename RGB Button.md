@@ -10,10 +10,26 @@ Using Picozero to to sense a button press to control a RGB LED.
 
 ``` python
 # Import code
-from picozero import RGBLED
+from picozero import Button, RGBLED
 from time import sleep
 
-# Pins for RGB LED
+# Callback function for button
+def next():
+    # Use global variable
+    global colour
+   
+    # Increment variable 
+    colour = colour + 1
+   
+    # Check variable value
+    if colour == 5:
+        # Loop back to the start
+        colour = 0
+
+# GPIO pin for button
+button = Button(10)
+
+# GPIO pins for RGB LED
 rgb = RGBLED(13, 14, 15)
 
 # Declare RGB Colours
@@ -26,24 +42,14 @@ white = (255, 255, 255)  # All on
 # Declare array
 colours = [red, green, blue, white, black]
 
+# Declare variable
+colour = 0
+
+# Setup button callback
+button.when_pressed = next
+
 # Loop forever
 while True:
-    
-    # Show each colour in turn
-    for colour in colours:
-        rgb.color = colour
-        sleep(0.5)
-    
-    # Get brighter
-    for counter in range(256):
-        rgb.color = (counter, counter, counter)
-        sleep(0.005)
-    
-    # Get dimmer
-    for counter in range(256):
-        rgb.color = (255-counter, 255-counter, 255-counter)
-        sleep(0.005)
-        
-    sleep(0.5)
- ```
+    rgb.color = colours[colour]
+```
  
