@@ -13,7 +13,7 @@ Using Picozero to control a RGB LED.
 from picozero import RGBLED
 from time import sleep
 
-# Pins for RGB LED
+# GPIO pins for RGB LED
 rgb = RGBLED(13, 14, 15)
 
 # Declare RGB Colours
