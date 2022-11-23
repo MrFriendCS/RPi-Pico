@@ -11,7 +11,6 @@ Using Picozero to to sense a button press to control a RGB LED.
 ``` python
 # Import code
 from picozero import Button, RGBLED
-from time import sleep
 
 # Callback function for button
 def next():
