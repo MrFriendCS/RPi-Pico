@@ -1,14 +1,3 @@
-# RGB LED
-
-Using Picozero to to sense a button press to control a RGB LED.
-
-## Layout
-
-![RGB LED Layout](media/rgbButton.png)
-
-## Code
-
-``` python
 # Import code
 from picozero import Button, RGBLED
 from time import sleep
@@ -51,5 +40,3 @@ button.when_pressed = next
 # Loop forever
 while True:
     rgb.color = colours[colour]
-```
- 
