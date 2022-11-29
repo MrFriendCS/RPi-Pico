@@ -13,7 +13,7 @@ from picozero import Servo
 from time import sleep
 
 # Kitronik Clippable Servo 25105
-# Vcc to Vbus (5V) $\pi$
+# Vcc to Vbus (5V)
 # Pulse width: 500 - 2500 μS
 
 servo = Servo(1, min_pulse_width=0.0005, max_pulse_width=0.0025)
