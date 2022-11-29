@@ -12,8 +12,10 @@ Using Picozero to control a servo.
 from picozero import Servo
 from time import sleep
 
-# GPIO pin for servo signal
-servo = Servo(1)
+# Kitronic Clippable Servo 25105
+# Vcc = 5V
+
+servo = Servo(1, min_pulse_width=0.0005, max_pulse_width=0.0025)
 
 # Set the servo to its minimum position
 servo.min()
@@ -27,6 +29,6 @@ sleep(1)
 servo.max()
 sleep(1)
 
-# Turn the servo "off" by setting the value to None
+# Turn the servo “off” by setting the value to None
 servo.off()
 ```
