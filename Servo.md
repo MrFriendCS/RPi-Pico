@@ -16,6 +16,7 @@ from time import sleep
 # Vcc to Vbus (5V)
 # Pulse width: 500 - 2500 μS
 
+# GPIO pin for servo
 servo = Servo(1, min_pulse_width=0.0005, max_pulse_width=0.0025)
 
 # Set the servo to its minimum position
