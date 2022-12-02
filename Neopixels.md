@@ -11,12 +11,14 @@ Using Picozero to control a strip of Neopixels.
 ``` python
 import time
 from neopixel import Neopixel
+# https://github.com/blaz-r/pi_pico_neopixel
 
 # Kitronik ZIP Stick, 35129 - 5 LEDS
-
 numpix = 5
-gpio = 28
 mode = "GRB"
+
+gpio = 28
+
 pixels = Neopixel(numpix, 0, gpio, mode)
   
 red = (255, 0, 0)
@@ -38,12 +40,12 @@ while True:
         pixels.show()
         time.sleep(1)
     
-    for counter in range(10):
+    for counter in range(5):
         pixels.rotate_right()
         pixels.show()
         time.sleep(1)
         
-    for counter in range(10):
+    for counter in range(5):
         pixels.rotate_left()
         pixels.show()
         time.sleep(1)
