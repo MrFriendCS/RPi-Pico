@@ -35,26 +35,31 @@ colours = [red, yellow, green, cyan, blue]
 
 while True:
     
+    # Turn each LED on - various colours
     for index in range(5):
         pixels.set_pixel(index, colours[index])
         pixels.show()
         time.sleep(1)
     
+    # Rotate right 5 times
     for counter in range(5):
         pixels.rotate_right()
         pixels.show()
         time.sleep(1)
-        
+    
+    # Rotate left 5 times
     for counter in range(5):
         pixels.rotate_left()
         pixels.show()
         time.sleep(1)
-        
+    
+    # Turn each LED white (fully on)
     for index in range(5):
         pixels.set_pixel(index, white)
         pixels.show()
         time.sleep(1)
     
+    # Turn each LED black (fully off)
     for index in range(5):
         pixels.set_pixel(4-index, black)
         pixels.show()
