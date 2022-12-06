@@ -73,5 +73,5 @@ while True:
     # Turn all LEDs black (fully off)
     pixels.fill(black)
     pixels.show()
-    time.sleep(1
+    time.sleep(1)
 ```
