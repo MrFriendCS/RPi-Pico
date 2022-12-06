@@ -39,19 +39,19 @@ while True:
     for index in range(5):
         pixels.set_pixel(index, colours[index])
         pixels.show()
-        time.sleep(1)
+        time.sleep(0.5)
     
-    # Rotate right 5 times
-    for counter in range(5):
+    # Rotate right 4 times
+    for counter in range(4):
         pixels.rotate_right()
         pixels.show()
-        time.sleep(1)
+        time.sleep(0.5)
     
-    # Rotate left 5 times
-    for counter in range(5):
+    # Rotate left 4 times
+    for counter in range(4):
         pixels.rotate_left()
         pixels.show()
-        time.sleep(1)
+        time.sleep(0.5)
     
     # Flash LEDs on and off
     for counter in range(5):
@@ -64,4 +64,14 @@ while True:
         pixels.fill(black)
         pixels.show()
         time.sleep(0.5)
+        
+    # Display a gradient between two colours 
+    pixels.set_pixel_line_gradient(0, 4, yellow, red)
+    pixels.show()
+    time.sleep(2)
+        
+    # Turn all LEDs black (fully off)
+    pixels.fill(black)
+    pixels.show()
+    time.sleep(1
 ```
