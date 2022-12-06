@@ -53,15 +53,15 @@ while True:
         pixels.show()
         time.sleep(1)
     
-    # Turn each LED white (fully on)
-    for index in range(5):
-        pixels.set_pixel(index, white)
+    # Flash LEDs on and off
+    for counter in range(5):
+        # Turn all LEDs white (fully on)
+        pixels.fill(white)
         pixels.show()
-        time.sleep(1)
-    
-    # Turn each LED black (fully off)
-    for index in range(5):
-        pixels.set_pixel(4-index, black)
+        time.sleep(0.5)
+        
+        # Turn all LEDs black (fully off)
+        pixels.fill(black)
         pixels.show()
-        time.sleep(1)
+        time.sleep(0.5)
 ```
