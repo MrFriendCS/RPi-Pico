@@ -69,9 +69,13 @@ while True:
     pixels.set_pixel_line_gradient(0, 4, yellow, red)
     pixels.show()
     time.sleep(2)
-        
-    # Turn all LEDs black (fully off)
-    pixels.fill(black)
+    
+    # Fill a section 
+    pixels.set_pixel_line(1, 3, green)
     pixels.show()
+    time.sleep(2)
+        
+    # Turn all LEDs off
+    pixels.clear()
     time.sleep(1)
 ```
