@@ -14,12 +14,12 @@ from neopixel import Neopixel
 # https://github.com/blaz-r/pi_pico_neopixel
 
 # Kitronik ZIP Stick, 35129 - 5 LEDS
-numpix = 5
+numOfPixels = 5
 mode = "GRB"
 
-gpio = 28
+gpio = 28  # Data In
 
-pixels = Neopixel(numpix, 0, gpio, mode)
+pixels = Neopixel(numOfPixels, 0, gpio, mode)
   
 red = (255, 0, 0)
 green = (0, 255, 0)
@@ -53,7 +53,7 @@ while True:
         pixels.show()
         time.sleep(0.5)
     
-    # Flash LEDs on and off
+    # Switch LEDs between two colours
     for counter in range(5):
         # Turn all LEDs white (fully on)
         pixels.fill(white)
@@ -70,12 +70,13 @@ while True:
     pixels.show()
     time.sleep(2)
     
-    # Fill a section 
+    # Fill a section
     pixels.set_pixel_line(1, 3, green)
     pixels.show()
     time.sleep(2)
         
     # Turn all LEDs off
     pixels.clear()
+    pixels.show()
     time.sleep(1)
 ```
