@@ -26,8 +26,8 @@ green = (0, 255, 0)
 blue = (0, 0, 255)
 yellow = (225, 225, 0)
 cyan = (0, 255, 255)
-black = (0, 0, 0)
-white = (255, 255, 255)
+black = (0, 0, 0)  # Fully off
+white = (255, 255, 255)  # Fully on
 
 pixels.brightness(25)
 
@@ -54,7 +54,7 @@ while True:
         time.sleep(0.5)
     
     # Switch LEDs between two colours
-    for counter in range(2):
+    for counter in range(3):
         # Turn all LEDs white (fully on)
         pixels.fill(white)
         pixels.show()
