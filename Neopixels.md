@@ -54,7 +54,7 @@ while True:
         time.sleep(0.5)
     
     # Switch LEDs between two colours
-    for counter in range(5):
+    for counter in range(2):
         # Turn all LEDs white (fully on)
         pixels.fill(white)
         pixels.show()
@@ -68,12 +68,12 @@ while True:
     # Display a gradient between two colours 
     pixels.set_pixel_line_gradient(0, 4, yellow, red)
     pixels.show()
-    time.sleep(2)
+    time.sleep(1)
     
     # Fill a section
     pixels.set_pixel_line(1, 3, green)
     pixels.show()
-    time.sleep(2)
+    time.sleep(1)
         
     # Turn all LEDs off
     pixels.clear()
